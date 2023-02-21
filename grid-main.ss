@@ -12,7 +12,7 @@
 (draw-obstacles grid0)
 (define grid (convert-grid grid0))
 (load "grid-new.ss")
-(load "grid-BFS.ss")
+(load "grid-HCS.ss")
 (set-goal grid)
 (set-start grid)
 (draw-start)
