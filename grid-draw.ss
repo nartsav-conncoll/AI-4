@@ -42,9 +42,22 @@
   (lambda (x y)
     (send canvas make-path-node x y)))
 
+(define draw-moved-robotx
+  (lambda (point)
+    (send canvas move-make-robot (car point) (cadr point))))
+
 (define draw-moved-robot
   (lambda (x y)
     (send canvas move-make-robot x y)))
+
+(define draw-moved-goalx
+  (lambda (point)
+    (send canvas move-make-goal (car point) (cadr point))))
+
+(define draw-moved-goal
+  (lambda (x y)
+    (send canvas move-make-goal x y)))
+
 
 (define draw-start
   (lambda ()
