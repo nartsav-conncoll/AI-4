@@ -19,13 +19,17 @@
                best))))))
 
 ; (g-minimax (adjacento goal) 0)
+()
 
 (define g-minimax
   (lambda (g-adjacentnodes counter)
     (cond 
-    	(equal? counter g-ply) (display "reached bottom layer")
-    	(moudlo counter)
-    	()
+    	[(equal? counter g-ply) (display "reached bottom layer")] ;base cond
+    	[(equal? 0 (moudlo counter)) (dequeue )];if the counter is even
+    	[(equal? 1 (moudlo counter))] ; if the counter is odd
+    	
+    	
+    	
     	;Once we've reached decision layer start calculating values of positions in the grid for our minimax graph
     ;else
        ; (enqueue list(g-minimax g-adjacentnodes list)))));creating the structure of the minimax graph through recursion
